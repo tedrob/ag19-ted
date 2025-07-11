@@ -8,6 +8,8 @@
       {
         "list": "off"
       }
-    ]
+    ],
+    "typescript-config/is-valid": "off",
+    "button-type": "off"
   }
 }
