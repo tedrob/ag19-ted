@@ -1,0 +1,16 @@
+@if (member(); as member) {
+<div class="flex flex-col gap3">
+  <div class="flex gap-3">
+    <span class="font-simibold">Member since: </span>
+    <span>{{member.created | date: 'longDate'}}</span>
+  </div>
+  <div class="flex gap-3">
+    <span class="font-simibold">Last active: </span>
+    <span>{{member.lastActive | date: 'dd MMM yyyy h:mm a'}}</span>
+  </div>
+  <h3 class="text-lg font-simibold text-primary">
+    About {{member.displayName}}
+  </h3>
+  <div>{{member.description}}</div>
+</div>
+}
