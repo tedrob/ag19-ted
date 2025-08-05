@@ -22,6 +22,12 @@
       {
         "button-name": "off"
       }
+    ],
+    "axe/aria": [
+      "default",
+      {
+        "aria-required-parent": "off"
+      }
     ]
   }
 }
