@@ -4,7 +4,6 @@ import { environment } from '../../environments/environment';
 import { EditableMember, Member, MemberParams, Photo } from '../../types/member';
 import { tap } from 'rxjs';
 import { PaginatedResult } from '../../types/pagination';
-import { MemberList } from '../../features/members/member-list/member-list';
 
 @Injectable({
   providedIn: 'root',

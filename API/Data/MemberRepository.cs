@@ -8,9 +8,9 @@ namespace API.Data;
 
 public class MemberRepository(AppDbContext context) : IMemberRepository
 {
-    public async Task<Member?> GetMemberByidAsync(string id)
+    public async Task<Member?> GetMemberByIdAsync(string id)
     {
-        return await context.Members
+         return await context.Members
         .FindAsync(id);
     }
 

@@ -26,7 +26,7 @@ public class MembersController(IMemberRepository memberRepository,
     [HttpGet("{id}")] // locahost:5001/api/members/bob-id
     public async Task<ActionResult<Member>> GetMember(string id)
     {
-        var member = await memberRepository.GetMemberByidAsync(id);
+        var member = await memberRepository.GetMemberByIdAsync(id);
 
         if (member == null) return NotFound();
 

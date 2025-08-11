@@ -27,6 +27,12 @@
     <nav class="flex gap-3 my-2 uppercase text-lg text-white">
       @if (accountService.currentUser()) {
       <a
+        routerLink="/about"
+        routerLinkActive="text-accent"
+        [routerLinkActiveOptions]="{exact: true}"
+        >About</a
+      >
+      <a
         routerLink="/members"
         routerLinkActive="text-accent"
         [routerLinkActiveOptions]="{exact: true}"
@@ -34,12 +40,14 @@
       >
       <a routerLink="/lists" routerLinkActive="text-accent">Lists</a>
       <a routerLink="/messages" routerLinkActive="text-accent">Messages</a>
+      <a routerLink="/players" routerLinkActive="text-accent">Players</a>
+      <a routerLink="/lottery" routerLinkActive="text-accent">Lottery</a>
       }
       <a routerLink="/errors" routerLinkActive="text-accent">Errors</a>
     </nav>
 
     @if (busyService.busyRequestCount() > 0) {
-      <span class="loading loading-spinner text-accent"></span>
+    <span class="loading loading-spinner text-accent"></span>
     }
 
     <div class="flex align-middle ml-auto gap-3">
