@@ -47,7 +47,7 @@ export class Messages implements OnInit {
           this.paginatedMessages.update(prev => {
             if (!prev) return null;
 
-            const newItems= prev.items.filter(x => x.id !== id || []);
+            const newItems= prev.items.filter(x => x.id !== id) || [];
 
             return {
               items: newItems,
