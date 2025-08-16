@@ -42,6 +42,8 @@
       <a routerLink="/messages" routerLinkActive="text-accent">Messages</a>
       <a routerLink="/players" routerLinkActive="text-accent">Players</a>
       <a routerLink="/lottery" routerLinkActive="text-accent">Lottery</a>
+      <a *appHasRole="['Admin', 'Moderator']" routerLink="/admin" routerLinkActive="text-accent">Admin</a>
+
       }
       <a routerLink="/errors" routerLinkActive="text-accent">Errors</a>
     </nav>
@@ -92,7 +94,7 @@
           class="flex items-center text-white text-xl gap-3 cursor-pointer"
         >
           <img
-            [src]="user?.imageUrl || 'public/assets/user.png'"
+            [src]="user?.imageUrl || 'user.png'"
             alt="user avatar"
             class="w-10 h-10 rounded-full"
           />
